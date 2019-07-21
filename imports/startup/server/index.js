@@ -9,7 +9,6 @@ Meteor.startup(() => {
             'get.commits'() {
                 const {data} = HTTP.get(GITHUB_API_VUEJS_COMMITS, {
                     headers: {
-                        'Authorization': 'token 9ddf6b08a2f588d36a47da38b5be28fff559d3fa',
                         'user-agent': 'node.js'
                     }
                 })
