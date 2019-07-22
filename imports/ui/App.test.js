@@ -1,6 +1,5 @@
 import expect from 'expect'
-
-const lastChar = s => !isNaN(Number(s[s.length - 1]))
+import {lastChar} from './App'
 
 describe('Unit test', function() {
     it('should colored to yellow', function () {
