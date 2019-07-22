@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { Meteor } from 'meteor/meteor';
 
+export const lastChar = s => !isNaN(Number(s[s.length - 1]))
+
 const App = () => {
   const [commits, setCommits] = useState([])
   const [loading, setLoading] = useState(false)
@@ -15,8 +17,6 @@ const App = () => {
       setLoading(false)
     })
   }, [])
-  
-  const lastChar = s => !isNaN(Number(s[s.length - 1]))
 
   const renderCommitList = () => commits.map(({hash, author, commit}) => {
     const isNumber = lastChar(hash)
